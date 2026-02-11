@@ -11,25 +11,55 @@ const TopBar = () => {
 const MainNav = () => {
     return (
         <nav className="w-full bg-white mx-auto flex items-center justify-between p-6 px-14">
-            <h1 className="text-text text-2xl font-extrabold cursor-pointer">STICH & THREADS</h1>
+            <h1 className="text-text text-xl sm:text-2xl font-extrabold cursor-pointer">STICH & THREADS</h1>
 
-            <ul className="flex items-center gap-6 uppercase font-medium tracking-wider">
-                {['Home','About','Services','Portfolio','Contact Us','Get a Quote'].map((item,key)=>{
+            <ul className="hidden md:flex items-center gap-6 uppercase font-medium tracking-wider">
+                {['Home', 'About', 'Services', 'Portfolio', 'Contact Us', 'Get a Quote'].map((item, key) => {
                     return (
                         <li key={key} className="flex items-center gap-1">
                             <a href="#" className="hover:text-primary">{item}</a>
-                            {item=="Services" && <i className="ri-arrow-down-s-line cursor-pointer"></i>}
+                            {item == "Services" && <i className="ri-arrow-down-s-line cursor-pointer"></i>}
                         </li>
                     )
                 })}
             </ul>
 
-            <div className="relative flex items-center gap-4 text-2xl">
+            <div className="hidden md:flex items-center gap-4 text-2xl">
                 <button aria-label="Facebook"><i class="ri-facebook-circle-fill cursor-pointer"></i></button>
                 <button aria-lablel="Instagram"><i class="ri-instagram-fill cursor-pointer"></i></button>
                 <span className="border-l-2 border-y-slate-200 h-12"></span><i className="ri-search-line cursor-pointer"></i>
             </div>
+
+            <i className="ri-menu-line font-bold text-xl cursor-pointer"></i>
+        
         </nav>
+    )
+}
+
+const SideBar = () => {
+    return (
+        <aside className="">
+            {/* <h1 className="text-text text-xl sm:text-2xl font-extrabold cursor-pointer">STICH & THREADS</h1> */}
+
+            <ul className="hidden md:flex items-center gap-6 uppercase font-medium tracking-wider">
+                {['Home', 'About', 'Services', 'Portfolio', 'Contact Us', 'Get a Quote'].map((item, key) => {
+                    return (
+                        <li key={key} className="flex items-center gap-1">
+                            <a href="#" className="hover:text-primary">{item}</a>
+                            {item == "Services" && <i className="ri-arrow-down-s-line cursor-pointer"></i>}
+                        </li>
+                    )
+                })}
+            </ul>
+
+            <div className="hidden md:flex items-center gap-4 text-2xl">
+                <button aria-label="Facebook"><i class="ri-facebook-circle-fill cursor-pointer"></i></button>
+                <button aria-lablel="Instagram"><i class="ri-instagram-fill cursor-pointer"></i></button>
+                <span className="border-l-2 border-y-slate-200 h-12"></span><i className="ri-search-line cursor-pointer"></i>
+            </div>
+
+            {/* <i className="ri-menu-line font-bold text-xl cursor-pointer"></i> */}
+        </aside>
     )
 }
 
@@ -39,6 +69,7 @@ const Navbar = () => {
             <header className="w-screen font-body mx-auto">
                 <TopBar />
                 <MainNav />
+                <SideBar />
             </header>
         </>
     )
