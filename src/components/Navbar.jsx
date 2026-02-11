@@ -39,7 +39,6 @@ const Navbar = () => {
             <header className="w-screen font-body mx-auto">
                 <TopBar />
                 <MainNav />
-
             </header>
         </>
     )
