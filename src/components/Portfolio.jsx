@@ -43,17 +43,17 @@ const Portfolio = () => {
   let steps = [1, 2, 3]
 
   return (
-    <section className="bg-white mt-36">
+    <section className="bg-white mt-36 overflow-x-hidden ">
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
         <div className="text-center flex flex-col items-center justify-center gap-5">
           <h1 className="uppercase text-black font-bold text-4xl md:text-5xl lg:text-6xl font-heading">How it<span className="text-primary"> works</span></h1>
           <p className="text-side">A simple process built to deliver high-quality files without delays or confusion.</p>
 
-          <div className="flex w-full items-center justify-center gap-2">
+          <div className="w-full flex items-center justify-center gap-2">
             {steps.map((step, key) => {
               return (
                 <div key={key} className="flex gap-2 items-center">
-                  <img src={dot} alt="dot" />
+                  <img src={dot} alt="dot" className="animate-spin transition-all duration-300 ease-out hover:scale-105 active:scale-95" />
                   {key !== steps.length - 1 &&
                     (<img src={line} alt="line" />)}
                 </div>
