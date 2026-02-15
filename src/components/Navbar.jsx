@@ -4,7 +4,7 @@ const TopBar = () => {
     return (
         <div className="bg-primary tracking-wide text-white p-2 flex justify-center items-center">
             <i class="hidden md:block ri-arrow-left-s-line -translate-x-10"></i>
-            <span className="text-sm text-center sm:max-w-full sm:text-[16px]">Free shipping on US orders $100+ & Free exchanges</span>
+            <span className="text-sm text-center max-w-prose sm:text-[16px]">Free shipping on US orders $100+ & Free exchanges</span>
             <i class="hidden md:block ri-arrow-right-s-line translate-x-10"></i>
         </div>
     )
@@ -77,7 +77,7 @@ const Navbar = () => {
                 <TopBar />
                 <MainNav />
             </header>
-        </>
+        </> 
     )
 }
 

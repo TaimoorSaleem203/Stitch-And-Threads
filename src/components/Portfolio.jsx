@@ -40,7 +40,6 @@ const Card = ({ icon, step, title, desc, color, btn }) => {
 };
 
 const Portfolio = () => {
-  let steps = [1, 2, 3]
 
   return (
     <section className="bg-white mt-36 overflow-x-hidden ">
@@ -50,11 +49,11 @@ const Portfolio = () => {
           <p className="text-side">A simple process built to deliver high-quality files without delays or confusion.</p>
 
           <div className="w-full flex items-center justify-center gap-2">
-            {steps.map((step, key) => {
+            {cards.map((step, key) => {
               return (
                 <div key={key} className="flex gap-2 items-center">
                   <img src={dot} alt="dot" className="animate-spin transition-all duration-300 ease-out hover:scale-105 active:scale-95" />
-                  {key !== steps.length - 1 &&
+                  {key !== cards.length - 1 &&
                     (<img src={line} alt="line" />)}
                 </div>
               )
